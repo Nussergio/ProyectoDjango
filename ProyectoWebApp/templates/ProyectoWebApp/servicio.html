@@ -1,7 +1,15 @@
 {% extends 'ProyectoWebApp/base.html'%}
 
- {% load static %}
+{% load static %}
 
- {% block content %}
- <p>servicio</p>
- {% endblock %}
+{% block content %}
+<div style="color: white ;">
+     {% for servicio in servi %}
+
+     <h2>{{servicio.titulo}}</h2>
+     <p>{{servicio.Contento}}</p>
+     <img src="{{servicio.imagen.url}}" width="500px">
+
+     {% endfor %}
+</div>
+{% endblock %}
